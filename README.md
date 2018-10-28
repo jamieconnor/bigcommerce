@@ -11,5 +11,7 @@ yarn install
 yarn build
 docker build -t nginx .
 docker run --name whatsforlunch -d -p 8000:80 nginx
-yarn cypress run 
+yarn cypress run
 ```
+
+The site will be available from http://localhost:8000
