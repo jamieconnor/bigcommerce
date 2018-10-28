@@ -83,11 +83,12 @@
             if (available) {
               const now = moment();
               const haveThis = _.find(this.ingredients, o => {
-                const useBy = moment(o['use-by']);
+                const useBy = moment(o['use-by']).add(1, 'days'); // add a day so it includes the day we are on
                 return ingredient === o.title && now.isBefore(useBy);
               });
               if (haveThis) {
                 const bestBefore = moment(haveThis['best-before']);
+                console.log(bestBefore);
                 if (now.isAfter(bestBefore)) {
                   gettingStinky = true;
                 }
