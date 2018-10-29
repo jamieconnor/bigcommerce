@@ -1,4 +1,4 @@
-# Big Commerce Practical
+# Rezdy Practical
 
 Practical component of Big Commerce Interview
 
